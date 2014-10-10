@@ -16,7 +16,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.rp.domain.Tarefa;
+import com.rp.repository.interceptors.EntityInterceptor;
 import com.rp.repository.jpa.TarefaRepositoryBean;
+import com.rp.repository.jpa.listener.RepositoryEntityListener;
 
 @RunWith(Arquillian.class)
 public class TarefaRepositoryBeanTest {
@@ -31,6 +33,8 @@ public class TarefaRepositoryBeanTest {
 				.addPackage(Tarefa.class.getPackage())
 				.addPackage(TarefaRepository.class.getPackage())
 				.addPackage(TarefaRepositoryBean.class.getPackage())
+				.addPackage(RepositoryEntityListener.class.getPackage())
+				.addPackage(EntityInterceptor.class.getPackage())
 				.addClass(TarefaRepositoryBeanTest.class)
 				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
 				.addAsResource("test-persistence.xml","META-INF/persistence.xml")
@@ -42,6 +46,7 @@ public class TarefaRepositoryBeanTest {
 		Tarefa t = new Tarefa();
 		t.setDescricaoResumida("Primeira tarefa");
 		repository.salvar(t);
+		Assert.assertNotNull(t.getDataCadastro());
 		Assert.assertNotNull(t.getId());
 	}
 

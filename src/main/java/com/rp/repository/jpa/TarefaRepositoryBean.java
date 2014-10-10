@@ -3,7 +3,6 @@ package com.rp.repository.jpa;
 import javax.ejb.Stateless;
 
 import com.rp.domain.Tarefa;
-import com.rp.repository.BaseRepository;
 import com.rp.repository.TarefaRepository;
 
 @Stateless

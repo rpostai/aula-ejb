@@ -1,10 +1,14 @@
-package com.rp.repository;
+package com.rp.repository.jpa;
 
 import java.util.List;
 
+import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+
+import com.rp.repository.Repository;
+import com.rp.repository.interceptors.EntityInterceptor;
 
 public abstract class BaseRepository<T> implements Repository<T> {
 
@@ -17,10 +21,16 @@ public abstract class BaseRepository<T> implements Repository<T> {
 	@PersistenceContext(unitName = "aulaPU")
 	private EntityManager em;
 
+	@Interceptors({
+		EntityInterceptor.class
+	})
 	public void salvar(T obj) {
 		em.persist(obj);
 	}
 
+	@Interceptors({
+		EntityInterceptor.class
+	})
 	public void excluir(Long id) {
 		T obj = get(id);
 		em.remove(obj);

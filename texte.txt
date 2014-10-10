@@ -1,0 +1,161 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building EJB Todo List 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ principal ---
+[INFO] Deleting C:\work\aula-ejb\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ principal ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ principal ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 11 source files to C:\work\aula-ejb\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ principal ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ principal ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\work\aula-ejb\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ principal ---
+[INFO] Surefire report directory: C:\work\aula-ejb\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.rp.repository.TarefaRepositoryBeanTest
+21:21:04,272 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+21:21:04,600 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+21:21:04,694 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015899: WildFly 8.1.0.Final "Kenny" starting
+21:21:05,913 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+21:21:05,944 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.2.2.Final
+21:21:05,944 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.2.2.Final
+21:21:05,991 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+21:21:06,007 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+21:21:06,022 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+21:21:06,022 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+21:21:06,038 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+21:21:06,038 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+21:21:06,038 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013170: Current PicketBox version=4.0.21.Beta1
+21:21:06,054 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+21:21:06,069 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+21:21:06,069 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-8) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.5.Final)
+21:21:06,085 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010417: Started Driver service with driver-name = h2
+21:21:06,085 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 4.0.3.Final
+21:21:06,100 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) JBAS015400: Bound mail session [java:jboss/mail/Default]
+21:21:06,100 INFO  [org.jboss.as.naming] (MSC service thread 1-8) JBAS011802: Starting Naming Service
+21:21:06,147 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.0.15.Final starting
+21:21:06,147 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017502: Undertow 1.0.15.Final starting
+21:21:06,350 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path C:\tools\wildfly-8.1.0.Final/welcome-content
+21:21:06,350 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017525: Started server default-server.
+21:21:06,382 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) JBAS017531: Host default-host starting
+21:21:06,585 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-4) JBAS015012: Started FileSystemDeploymentService for directory C:\tools\wildfly-8.1.0.Final\standalone\deployments
+21:21:06,632 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017519: Undertow HTTP listener default listening on /127.0.0.1:8080
+21:21:06,788 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+21:21:06,960 INFO  [org.jboss.ws.common.management] (MSC service thread 1-5) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.2.4.Final
+21:21:07,226 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+21:21:07,226 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+21:21:07,226 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.1.0.Final "Kenny" started in 3391ms - Started 184 of 233 services (81 services are lazy, passive or on-demand)
+21:21:15,320 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014900: Content added at location C:\tools\wildfly-8.1.0.Final\standalone\data\content\27\cd672ee51b38a520c07f81dc1b877bc1aa6a79\content
+21:21:15,351 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015876: Starting deployment of "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war" (runtime-name: "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war")
+21:21:16,882 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) JBAS011401: Read persistence.xml for aulaPU
+21:21:17,085 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) JBAS010400: Bound data source [java:/aula]
+21:21:17,085 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 13) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war#aulaPU'
+21:21:17,085 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 13) HHH000204: Processing PersistenceUnitInfo [
+	name: aulaPU
+	...]
+21:21:17,163 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 13) HHH000412: Hibernate Core {4.3.5.Final}
+21:21:17,163 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 13) HHH000206: hibernate.properties not found
+21:21:17,163 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 13) HHH000021: Bytecode provider name : javassist
+21:21:17,320 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) JBAS016002: Processing weld deployment c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war
+21:21:17,398 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-5) HV000001: Hibernate Validator 5.1.0.Final
+21:21:17,507 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named UsuarioRepositoryBean in deployment unit deployment "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war" are as follows:
+
+	java:global/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/UsuarioRepositoryBean!com.rp.repository.UsuarioRepository
+	java:app/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/UsuarioRepositoryBean!com.rp.repository.UsuarioRepository
+	java:module/UsuarioRepositoryBean!com.rp.repository.UsuarioRepository
+	java:global/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/UsuarioRepositoryBean
+	java:app/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/UsuarioRepositoryBean
+	java:module/UsuarioRepositoryBean
+
+21:21:17,523 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named TarefaRepositoryBean in deployment unit deployment "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war" are as follows:
+
+	java:global/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/TarefaRepositoryBean!com.rp.repository.TarefaRepository
+	java:app/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/TarefaRepositoryBean!com.rp.repository.TarefaRepository
+	java:module/TarefaRepositoryBean!com.rp.repository.TarefaRepository
+	java:global/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/TarefaRepositoryBean
+	java:app/c1ecde99-d71f-4dc6-ad6a-e5c654428e14/TarefaRepositoryBean
+	java:module/TarefaRepositoryBean
+
+21:21:17,695 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016005: Starting Services for CDI deployment: c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war
+21:21:17,710 INFO  [org.jboss.weld.Version] (MSC service thread 1-3) WELD-000900: 2.1.2 (Final)
+21:21:17,757 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016008: Starting weld service for deployment c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war
+21:21:17,906 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 13) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war#aulaPU'
+21:21:17,983 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 13) HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+21:21:18,172 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 13) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+21:21:18,188 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 13) HHH000431: Unable to determine H2 database version, certain features may not work
+21:21:18,297 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 13) HHH000397: Using ASTQueryTranslatorFactory
+21:21:18,719 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 13) HHH000227: Running hbm2ddl schema export
+21:21:18,735 INFO  [stdout] (ServerService Thread Pool -- 13) Hibernate: drop table Usuario if exists
+21:21:18,735 INFO  [stdout] (ServerService Thread Pool -- 13) Hibernate: drop table al_tarefa if exists
+21:21:18,735 INFO  [stdout] (ServerService Thread Pool -- 13) Hibernate: drop sequence hibernate_sequence
+21:21:18,735 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 13) HHH000389: Unsuccessful: drop sequence hibernate_sequence
+21:21:18,735 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 13) Sequence "HIBERNATE_SEQUENCE" not found; SQL statement:
+drop sequence hibernate_sequence [90036-173]
+21:21:18,735 INFO  [stdout] (ServerService Thread Pool -- 13) Hibernate: create table Usuario (id bigint not null, data_cadastro timestamp not null, data_ultima_alteracao timestamp, version bigint not null, login varchar(30) not null, nome varchar(100) not null, senha varchar(20) not null, primary key (id))
+21:21:18,750 INFO  [stdout] (ServerService Thread Pool -- 13) Hibernate: create table al_tarefa (id bigint not null, data_cadastro timestamp not null, data_ultima_alteracao timestamp, version bigint not null, dataPrevista timestamp, dataRealizada timestamp, descricao_detalhada clob, descricao_resumida varchar(100) not null, primary key (id))
+21:21:18,750 INFO  [stdout] (ServerService Thread Pool -- 13) Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+21:21:18,750 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 13) HHH000230: Schema export complete
+21:21:19,594 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017534: Registered web context: /c1ecde99-d71f-4dc6-ad6a-e5c654428e14
+21:21:19,797 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018559: Deployed "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war" (runtime-name : "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war")
+21:21:21,719 WARN  [org.dbunit.dataset.AbstractTableMetaData] (default task-2) Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+21:21:21,938 INFO  [stdout] (default task-2) Hibernate: select tarefa0_.id as id1_1_, tarefa0_.data_cadastro as data_cad2_1_, tarefa0_.data_ultima_alteracao as data_ult3_1_, tarefa0_.version as version4_1_, tarefa0_.dataPrevista as dataPrev5_1_, tarefa0_.dataRealizada as dataReal6_1_, tarefa0_.descricao_detalhada as descrica7_1_, tarefa0_.descricao_resumida as descrica8_1_ from al_tarefa tarefa0_
+21:21:22,063 INFO  [stdout] (default task-8) Rodrigo [Ljava.lang.Object;@176af3f0
+21:21:22,063 INFO  [stdout] (default task-8) Hibernate: call next value for hibernate_sequence
+21:21:22,094 INFO  [stdout] (default task-8) Hibernate: insert into al_tarefa (data_cadastro, data_ultima_alteracao, version, dataPrevista, dataRealizada, descricao_detalhada, descricao_resumida, id) values (?, ?, ?, ?, ?, ?, ?, ?)
+21:21:22,126 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017535: Unregistered web context: /c1ecde99-d71f-4dc6-ad6a-e5c654428e14
+21:21:22,141 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 5) JBAS011410: Stopping Persistence Unit (phase 2 of 2) Service 'c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war#aulaPU'
+21:21:22,141 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 5) HHH000227: Running hbm2ddl schema export
+21:21:22,141 INFO  [stdout] (ServerService Thread Pool -- 5) Hibernate: drop table Usuario if exists
+21:21:22,141 INFO  [stdout] (ServerService Thread Pool -- 5) Hibernate: drop table al_tarefa if exists
+21:21:22,157 INFO  [stdout] (ServerService Thread Pool -- 5) Hibernate: drop sequence hibernate_sequence
+21:21:22,157 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 5) HHH000230: Schema export complete
+21:21:22,157 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) JBAS016009: Stopping weld service for deployment c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war
+21:21:22,173 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 5) JBAS011410: Stopping Persistence Unit (phase 1 of 2) Service 'c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war#aulaPU'
+21:21:22,173 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010409: Unbound data source [java:/aula]
+21:21:22,329 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Stopped deployment c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war (runtime-name: c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war) in 200ms
+21:21:22,485 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014901: Content removed from location C:\tools\wildfly-8.1.0.Final\standalone\data\content\27\cd672ee51b38a520c07f81dc1b877bc1aa6a79\content
+21:21:22,485 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018558: Undeployed "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war" (runtime-name: "c1ecde99-d71f-4dc6-ad6a-e5c654428e14.war")
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.01 sec
+21:21:22,548 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017521: Undertow HTTP listener default suspending
+21:21:22,548 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017520: Undertow HTTP listener default stopped, was bound to /127.0.0.1:8080
+21:21:22,548 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+21:21:22,548 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017532: Host default-host stopping
+21:21:22,563 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017506: Undertow 1.0.15.Final stopping
+21:21:22,563 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) JBAS010418: Stopped Driver service with driver-name = h2
+21:21:22,594 INFO  [org.jboss.as] (MSC service thread 1-5) JBAS015950: WildFly 8.1.0.Final "Kenny" stopped in 10ms
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ principal ---
+[INFO] Building jar: C:\work\aula-ejb\target\principal-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ principal ---
+[INFO] Installing C:\work\aula-ejb\target\principal-0.0.1-SNAPSHOT.jar to C:\Users\rodrigo.postai\.m2\repository\com\rp\todo\principal\0.0.1-SNAPSHOT\principal-0.0.1-SNAPSHOT.jar
+[INFO] Installing C:\work\aula-ejb\pom.xml to C:\Users\rodrigo.postai\.m2\repository\com\rp\todo\principal\0.0.1-SNAPSHOT\principal-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26.698s
+[INFO] Finished at: Thu Oct 09 21:21:23 BRT 2014
+[INFO] Final Memory: 27M/221M
+[INFO] ------------------------------------------------------------------------
