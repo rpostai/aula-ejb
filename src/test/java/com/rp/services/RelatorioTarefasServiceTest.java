@@ -1,13 +1,11 @@
-package com.rp.repository;
+package com.rp.services;
 
-import java.util.Calendar;
-import java.util.List;
+import java.util.concurrent.Future;
 
 import javax.ejb.EJB;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.arquillian.persistence.ShouldMatchDataSet;
 import org.jboss.arquillian.persistence.UsingDataSet;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
@@ -17,15 +15,17 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.rp.domain.Tarefa;
+import com.rp.repository.TarefaRepository;
+import com.rp.repository.TarefaRepositoryBeanTest;
 import com.rp.repository.interceptors.EntityInterceptor;
 import com.rp.repository.jpa.TarefaRepositoryBean;
 import com.rp.repository.jpa.listener.RepositoryEntityListener;
 
 @RunWith(Arquillian.class)
-public class TarefaRepositoryBeanTest {
+public class RelatorioTarefasServiceTest {
 
 	@EJB
-	private TarefaRepository repository;
+	private RelatorioTarefasService service;
 
 	@Deployment
 	public static WebArchive createDeployment() {
@@ -37,27 +37,17 @@ public class TarefaRepositoryBeanTest {
 				.addPackage(RepositoryEntityListener.class.getPackage())
 				.addPackage(EntityInterceptor.class.getPackage())
 				.addClass(TarefaRepositoryBeanTest.class)
+				.addPackage(TarefasService.class.getPackage())
 				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
-				.addAsResource("test-persistence.xml","META-INF/persistence.xml")
+				.addAsResource("test-persistence.xml",
+						"META-INF/persistence.xml")
 				.addAsWebInfResource("aula-ds.xml");
 	}
 
 	@Test
-	public void testInsertTarefa() {
-		Tarefa t = new Tarefa();
-		t.setDescricaoResumida("Primeira tarefa");
-		t.setDataPrevista(Calendar.getInstance().getTime());
-		repository.salvar(t);
-		Assert.assertNotNull(t.getDataCadastro());
-		Assert.assertNotNull(t.getId());
-	}
-
-	@Test
 	@UsingDataSet("tarefa.xml")
-	@ShouldMatchDataSet("tarefas-esperadas.xml")
-	public void getTodasTarefas() {
-		List<Tarefa> tarefas = repository.getTodos();
-		Assert.assertEquals(2, tarefas.size());
+	public void testRelatorioTarefas() throws Exception {
+		Future<String> result = service.gerarRelatorioTempoEspera();
+		Assert.assertEquals("34", result.get());
 	}
-
 }

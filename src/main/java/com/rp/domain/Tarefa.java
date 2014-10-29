@@ -1,5 +1,6 @@
 package com.rp.domain;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -25,9 +26,11 @@ public class Tarefa extends BaseEntity {
 	private String descricaoDetalhda;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "data_prevista", nullable = false)
 	private Date dataPrevista;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "data_realizada", nullable = true)
 	private Date dataRealizada;
 
 	public String getDescricaoResumida() {
@@ -69,7 +72,19 @@ public class Tarefa extends BaseEntity {
 				+ ", dataPrevista=" + dataPrevista + ", dataRealizada="
 				+ dataRealizada + "]";
 	}
-	
-	
+
+	public int getTempoEsperaEmDias() {
+		System.out.println("ThreadID " + Thread.currentThread().getId());
+		long tempo1 = dataPrevista.getTime();  
+		long tempo2 = dataRealizada != null ? dataRealizada.getTime() : Calendar
+				.getInstance().getTime().getTime();
+		
+        long difTempo = tempo2 - tempo1;  
+        return (int) ((difTempo + 60L * 60 * 1000) / (24L * 60 * 60 * 1000)) + 1;  
+		
+//		Days d = Days.daysBetween(new DateTime(dataPrevista), new DateTime(
+//				dataFinal));
+//		return d.getDays();
+	}
 
 }
